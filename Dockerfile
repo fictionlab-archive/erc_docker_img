@@ -20,6 +20,16 @@ RUN curl -sSf $FREEDOM_URL | python \
   && rm -rf /var/lib/apt/lists/* \
   && rm -rf /root/.cache/pip/* 
 
+# Install catkin-tools
+RUN apt-get update && apt-get install -y python-catkin-tools \
+  && rm -rf /var/lib/apt/lists/*
+
+# Copy packages and build the workspace
+WORKDIR /catkin_ws
+COPY src ./src
+RUN rosdep update && rosdep install --from-paths src -iy
+RUN catkin config --extend /opt/ros/melodic && catkin build
+
 COPY start.sh /
 
 ENTRYPOINT []

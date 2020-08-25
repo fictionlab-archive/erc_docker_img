@@ -1,8 +1,8 @@
 #!/bin/bash -e
 
-source /opt/ros/melodic/setup.bash
+source /catkin_ws/devel/setup.bash
 
-echo "source /opt/ros/melodic/setup.bash" >> /etc/bash.bashrc
+echo "source /catkin_ws/devel/setup.bash" >> /etc/bash.bashrc
 echo "ROS_IP=${ROS_IP}" >> /etc/environment
 echo "ROS_MASTER_URI=${ROS_MASTER_URI}" >> /etc/environment
 

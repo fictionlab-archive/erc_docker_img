@@ -1,0 +1,17 @@
+<package format="2">
+  <name>erc_example</name>
+  <version>0.0.0</version>
+  <description>
+    An example package that can be used in the ERC competitions
+  </description>
+
+  <maintainer email="blazej@turtlerover.com">Błażej Sowa</maintainer>
+
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>cv_bridge</exec_depend>
+
+</package>
