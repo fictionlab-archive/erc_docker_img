@@ -5,7 +5,10 @@ ENV ROS_IP 127.0.0.1
 ENV ROS_MASTER_URI http://127.0.0.1:11311
 
 # Install some basic dependencies
-RUN apt-get update && apt-get -y install curl ssh ros-melodic-cv-bridge \
+RUN apt-get update && apt-get -y install \
+  curl ssh \
+  ros-melodic-cv-bridge \
+  python-pip python3-pip \
   && rm -rf /var/lib/apt/lists/*
 
 # Set root password
