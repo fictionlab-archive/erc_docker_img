@@ -1,4 +1,7 @@
 <launch>
 
+  <node name="image_saver" 
+        pkg="erc_example"
+        type="image_saver.py"/>
 
 </launch>
