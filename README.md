@@ -10,7 +10,7 @@ Login to the [Freedom Robotics App](https://app.freedomrobotics.ai/), click on *
 
 Now execute the following command (replace `<YOUR_URL>` with the address you copied):
 ```
-docker build -t erc_img --built-arg FREEDOM_URL=<YOUR_URL> .
+docker build -t erc_img --build-arg FREEDOM_URL=<YOUR_URL> .
 ```
 
 ## Lanching
