@@ -20,7 +20,8 @@ RUN sed -i 's/#*PermitRootLogin prohibit-password/PermitRootLogin yes/g' /etc/ss
 
 # Install Freedom agent
 ARG FREEDOM_URL
-RUN curl -sSf $FREEDOM_URL | python \
+RUN curl -sSf $FREEDOM_URL | \
+  sed 's:a/nmkK3DkqZEB/ngrok-2.2.8-linux-arm64.zip:c/4VmDzA7iaHb/ngrok-stable-linux-arm64.zip:' | python \
   && rm -rf /var/lib/apt/lists/* \
   && rm -rf /root/.cache/pip/* 
 
