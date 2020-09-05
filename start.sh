@@ -1,4 +1,4 @@
-#!/bin/bash -em
+#!/bin/bash -m
 
 source /catkin_ws/devel/setup.bash
 
