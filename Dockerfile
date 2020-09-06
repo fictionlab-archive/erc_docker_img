@@ -5,7 +5,7 @@ ENV ROS_IP 127.0.0.1
 ENV ROS_MASTER_URI http://127.0.0.1:11311
 
 # Install some basic dependencies
-RUN apt-get update && apt-get -y install \
+RUN apt-get update && apt-get -y upgrade && apt-get -y install \
   curl ssh \
   ros-melodic-cv-bridge \
   ros-melodic-tf \
